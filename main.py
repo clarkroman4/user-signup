@@ -21,7 +21,7 @@ def validation ():
 
     if len(username)< 3 or len(username)>20 or ' ' in username:
         username_error = "Please enter a username with no spaces, between 3 and 20 characters."
-        return render_template("signup_form.html", username= username, username_error = username_error)
+        return render_template("signup_form.html", username= username, email=email, username_error = username_error)
     
     if len(password) < 3 or len(password) > 20 or ' ' in password:
         password_error = "Please enter a password with no spaces, between 3 and 20 characters."
